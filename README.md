@@ -13,6 +13,15 @@ A community‑owned, tamper‑proof, and searchable database of plant and fungal
 | Vendor lock‑in | Portable, self‑hostable |
 | Contributor cannot verify integrity | Anyone can audit the entire history |
 
+## Governance Model
+
+The DGD is **not** a free‑for‑all. It balances openness with quality control using decentralized mechanisms:
+
+- **Write access**: Only DIDs that have staked a minimum number of AG tokens can add new records.
+- **Dispute resolution**: Token holders can vote to mark false data as "spam" (data is never deleted, but hidden from default queries).
+- **AI integration**: The AI checks for duplicates and data quality before a submission is accepted. The submission is then broadcast to the network.
+- **Transparency**: Every addition is signed, timestamped, and permanently recorded in the provenance log.
+
 ## Architecture Overview
 
 ```mermaid
@@ -95,9 +104,9 @@ node start.js
 
 ## Next Actions for You
 
-1. Create a new GitHub repo named `DGD-Blueprint` (or add this README to `AgNetworking/dgd-blueprint/`).
-2. Commit this README as the first file.
-3. Start Month 1 – install OrbitDB and IPFS locally, run the hello-world example from the OrbitDB docs.
+1. This README now includes a **Governance Model** to prevent spam and ensure quality.
+2. Start Month 1 – install OrbitDB and IPFS locally, run the hello-world example.
+3. When you implement the contribution workflow, add the staking and voting logic described above.
 
 ---
 *This is a living document. Update as you implement each phase.*
