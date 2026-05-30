@@ -124,3 +124,11 @@ node start.js
 
 ---
 *This is a living document. Update as you implement each phase.*
+
+## Discovery Rewards
+
+- **Grower (discoverer)** – Earns the **highest** token reward for discovering and cultivating a novel strain, validated by a credible lab.
+- **Laboratory (validator)** – Earns a **fee (tokens)** for performing and recording the test, but **lower** than the grower’s reward.
+- **Public repositories** – Provide baseline data (no token reward, just automated ingestion).
+
+This incentive structure encourages growers to seek out and cultivate new strains, while labs still benefit as secondary validators. The system becomes a **discovery engine**, not just a data aggregator.
