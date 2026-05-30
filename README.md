@@ -22,15 +22,29 @@ The DGD is **not** a free‑for‑all. It balances openness with quality control
 - **AI integration**: The AI checks for duplicates and data quality before a submission is accepted. The submission is then broadcast to the network.
 - **Transparency**: Every addition is signed, timestamped, and permanently recorded in the provenance log.
 
+## Roles and Incentives
+
+| Role | Data contributed | Token reward rate | Voting rights |
+|------|------------------|------------------|---------------|
+| **Grower** | Live sensor data, harvest logs, manual observations | **High** (core value) | ✅ Yes (by staking AG) |
+| **Laboratory** | Genetic, chemical, potency test results | **Medium** (supporting value) | ❌ No (unless individually staking) |
+| **AI / Node operator** | Computation, storage, network | **Low** (infrastructure) | ✅ Yes (by staking AG) |
+
 ## Architecture Overview
 
 ```mermaid
 graph TD
-    A[Grower Node] -->|Encrypted data + DID signature| B[IPFS]
-    B -->|Stores file (CID)| C[OrbitDB Document Store]
-    C -->|Indexes metadata| D[DGD Query API]
-    D -->|Feeds| E[AgTech AI RAG]
-    E -->|Predictions| F[Grower Dashboard]
+    A["Grower Node"]
+    B["IPFS (File Storage)"]
+    C["OrbitDB Document Store"]
+    D["DGD Query API"]
+    E["AgTech AI RAG"]
+    F["Grower Dashboard"]
+    A -->|"Encrypted data + DID signature"| B
+    B -->|"Stores file (CID)"| C
+    C -->|"Indexes metadata"| D
+    D -->|"Feeds"| E
+    E -->|"Predictions"| F
 ```
 
 ## Data Schema
@@ -104,17 +118,9 @@ node start.js
 
 ## Next Actions for You
 
-1. This README now includes a **Governance Model** to prevent spam and ensure quality.
+1. This README includes a corrected Mermaid diagram, governance model, and roles.
 2. Start Month 1 – install OrbitDB and IPFS locally, run the hello-world example.
 3. When you implement the contribution workflow, add the staking and voting logic described above.
 
 ---
 *This is a living document. Update as you implement each phase.*
-
-## Roles and Incentives
-
-| Role | Data contributed | Token reward rate | Voting rights |
-|------|------------------|------------------|---------------|
-| **Grower** | Live sensor data, harvest logs, manual observations | **High** (core value) | ✅ Yes (by staking AG) |
-| **Laboratory** | Genetic, chemical, potency test results | **Medium** (supporting value) | ❌ No (unless individually staking) |
-| **AI / Node operator** | Computation, storage, network | **Low** (infrastructure) | ✅ Yes (by staking AG) |
