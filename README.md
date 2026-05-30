@@ -110,3 +110,11 @@ node start.js
 
 ---
 *This is a living document. Update as you implement each phase.*
+
+## Roles and Incentives
+
+| Role | Data contributed | Token reward rate | Voting rights |
+|------|------------------|------------------|---------------|
+| **Grower** | Live sensor data, harvest logs, manual observations | **High** (core value) | ✅ Yes (by staking AG) |
+| **Laboratory** | Genetic, chemical, potency test results | **Medium** (supporting value) | ❌ No (unless individually staking) |
+| **AI / Node operator** | Computation, storage, network | **Low** (infrastructure) | ✅ Yes (by staking AG) |
